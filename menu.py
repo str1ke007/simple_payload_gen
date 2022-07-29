@@ -32,7 +32,7 @@ def main(IP, PORT, ARCH):
 		print(f"\n{WHITE}[+] Please wait for few minutes...\n")
 		result = subprocess.call(["./meta.sh", f"{IP}", f"{PORT}", f"{OP}", f"{ARCH}"])
 		if not result:
-			print(f"\n{GREEN}[+] Successful\n")
+			print(f"\n{GREEN}[+] Successful\n[+] File saved in {os.getcwd()}\n")
 		else:
 			print(f"{RED}[-] Error!")
 	except EXCEPTION:
@@ -59,7 +59,7 @@ while True:
 		flag = 1
 	else:
 		flag = 0
-		print(f"\n\n{RED}Invalid Port/IP\n\n[-] Please wait...")
+		print(f"\n\n{RED}[-] Invalid Port/IP\n\n[-] Please wait...")
 		sleep(2)
 		os.system('clear')
 	if flag == 1:
