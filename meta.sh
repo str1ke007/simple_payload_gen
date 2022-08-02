@@ -9,9 +9,6 @@ ARCH="-"
 if [ $4 -eq 1 ]
 then
 	ARCH="x64"
-elif [ $4 -eq 2 ]
-then
-	ARCH="x86"
 else
 	ARCH="x86"
 fi
@@ -41,5 +38,3 @@ then
 else
 	echo "[-] Invalid Input!"
 fi
-
-echo -n "[-] File Location: "; pwd
