@@ -1,4 +1,4 @@
-# simple_payload_gen
+# basic_payload_gen
 
 A basic Payload generator made using **Python**.
 >Payload Options ranges from
