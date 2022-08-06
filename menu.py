@@ -32,6 +32,10 @@ comm = (
     'display',
     'run',
 )
+IP = "0.0.0.0"
+PORT = 1234
+ARCH = "x86"
+PAYLOAD = ""
 
 
 def info():
@@ -72,21 +76,25 @@ def lists():
     print(f"{RED}payload{WHITE}\t\tdisplays info about the available payloads")
     print(f"{RED}run{WHITE}\t\trun the generator")
     print(f"{RED}display{WHITE}\t\tdisplay all")
+    print(f"{RED}clear{WHITE}\t\tclear screen")
     print(f"{RED}exit{WHITE}\t\texit\n")
 
 
-def display(IP, PORT, ARCH, OP, PAYLOAD):
+def display(IP, PORT, ARCH):
+    if IP and PORT and ARCH:
+        print(f"\n{MAGENTA}IP\t: {IP}")
+        print(f"PORT\t: {PORT}")
+        if ARCH == 1:
+            print(f"ARCH\t: x64\n")
+        else:
+            print(f"ARCH\t: x86\n")
+
+
+def display_payload(PAYLOAD):
     try:
-        print(f"\n{MAGENTA}IP: {IP}")
+        print(f"PAYLOAD\t: {PAYLOAD}\n{WHITE}")
     except:
-        print(f"\nIP: 0.0.0.0")
-    print(f"PORT: {PORT}")
-    print(f"OP  : {OP}")
-    if ARCH == 1:
-        print(f"ARCH: x64")
-    else:
-        print(f"ARCH: x86")
-    print(f"PAYLOAD: {PAYLOAD}\n{WHITE}")
+        print(f"\n\n{RED}[-] No payload to display{WHITE}\n\n")
 
 
 def payload():
@@ -169,9 +177,10 @@ def pre_requisite():
 
 def preinfo():
     while True:
-        print(f"\n\t{BLUE}Available Options\n{RED}IP  : 0.0.0.0\nPORT: 1234\n")
+        print(f"\n\t{BLUE}Available Options\n{RED}  IP\n  PORT\n  ARCHITECTURE\n\n{CYAN}IP?\n")
         IP = input(f"{ninput}")
         try:
+            print(f"\n{CYAN}PORT?\n")
             PORT = int(input(f"{ninput}"))
         except:
             PORT = 1234
@@ -183,7 +192,7 @@ def preinfo():
             print(f"\n\n{RED}[-] Invalid IP\n\n[-] Please wait...")
             sleep(2)
 
-    print(f"{GREEN}\n1) x64\n2) x86\n{RED}Architecture (Default -> x86)\n")
+    print(f"\n{RED}Architecture (Default -> x86){GREEN}\n1) x64\n2) x86\n")
     # Architecture Default (x86)
     ARCH = input(f"{ninput}")
     if not ARCH:
@@ -215,21 +224,36 @@ def main():
             command = input(f"{ninput}")
             if 'lists' in command.casefold():
                 lists()
-            if 'preinfo' in command.casefold():
+            elif 'preinfo' in command.casefold():
                 IP, PORT, ARCH = preinfo()
-            if 'payload' in command.casefold():
+            elif 'payload' in command.casefold():
                 OP, PAYLOAD = payload()
-            if 'display' in command.casefold():
-                display(IP, PORT, ARCH, OP, PAYLOAD)
-            if 'run' in command.casefold():
-                run(IP, PORT, ARCH, OP, PAYLOAD)
-            if 'exit' in command.casefold():
+            elif 'display' in command.casefold():
+                try:
+                    display(IP, PORT, ARCH)
+                    try:
+                        display_payload(PAYLOAD)
+                    except:
+                        pass
+                except:
+                    print(f"\n{MAGENTA}IP\t: 0.0.0.0 {RED}(not Default){MAGENTA}")
+                    print(f"PORT\t: 1234")
+                    print(f"ARCH\t: x86")
+                    print(f"PAYLOAD\t: None\n{WHITE}")
+            elif 'run' in command.casefold():
+                try:
+                    run(IP, PORT, ARCH, OP, PAYLOAD)
+                except:
+                    print(f"\n\n{RED}[-] IP/PORT/PAYLOAD ?\n\n{WHITE}")
+            elif command.casefold() in ('clear', 'cls'):
+                os.system('clear')
+            elif 'exit' in command.casefold():
                 print(f"\n{BLUE}[-] Thank you for trying out!\n\n")
                 sys.exit()
             else:
                 pass
         except KeyboardInterrupt:
-            print(f"\n{BLUE}[-] Type {RED}'exit'{BLUE} to quit")
+            print(f"\n\n{BLUE}[-] Type {RED}'exit'{BLUE} to quit\n")
 
 
 if __name__ == "__main__":
