@@ -3,9 +3,9 @@
 </h1>
 
 <p align="center">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/str1ke007/payload-generator">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues/str1ke007/payload-generator">
-  <img alt="GitHub" src="https://img.shields.io/github/license/str1ke007/payload-generator">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/str1ke007/simple_payload_gen">
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues/str1ke007/simple_payload_gen">
+  <img alt="GitHub" src="https://img.shields.io/github/license/str1ke007/simple_payload_gen">
 </p>
 
 <p align="center">
