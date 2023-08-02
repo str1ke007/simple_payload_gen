@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="banner.png" alt="Banner" width="600">
+  <img src="screenshots/banner.png" alt="Banner" width="600">
 </p>
 
 <h2>About</h2>
@@ -49,10 +49,10 @@ python3 payload_generator.py
 
 <h2>Screenshots</h2>
 <p align="center">
-  <img src="screenshot1.png" alt="Screenshot 1" width="600">
+  <img src="screenshots/screenshot1.png" alt="Screenshot 1" width="600">
 </p>
 <p align="center">
-  <img src="screenshot2.png" alt="Screenshot 2" width="600">
+  <img src="screenshots/screenshot2.png" alt="Screenshot 2" width="600">
 </p>
 <h2>Contributing</h2>
 
