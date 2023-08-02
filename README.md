@@ -65,7 +65,7 @@ python3 payload_generator.py
 Contributions to the Payload Generator project are welcome! Whether you want to fix a bug, add new features, or improve the documentation, feel free to open a pull request. Please make sure to follow the project's coding guidelines and best practices.
 <h2>License</h2>
 
-This project is licensed under the MIT License.
+This project is licensed under the Apache License.
 <h2>Contact</h2>
 
 For any inquiries or feedback, you can reach out to the project creator, str1ke007, on GitHub.
