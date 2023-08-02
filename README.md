@@ -32,7 +32,7 @@ To start using the Payload Generator, follow these simple steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/str1ke007/payload-generator.git
+git clone https://github.com/str1ke007/simple_payload_gen.git
 ```
 
 2. Navigate to the project directory:
