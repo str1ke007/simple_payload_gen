@@ -1,5 +1,5 @@
 <h1 align="center">
-  Payload Generator - Pg v1.2 Alpha
+  Payload Generator - Pg v1.0 Official Release
 </h1>
 
 <p align="center">
