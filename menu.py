@@ -85,7 +85,7 @@ class PayloadGenerator:
             ░╚═════╝░╚══════╝╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝
         \n
         {Colors.CYAN}
-        Pg v1.2 Alpha
+        Pg v1.0 Release
         Written by str1ke007
         Copyright©
 
